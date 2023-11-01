@@ -50,7 +50,7 @@ Boundary(b4, "BlockChain") {
 ## Components
 
 | Micro Service | Description  | 
-| :---: | :---: | 
+| :---: | :--- | 
 | MongoDB | Store Univerwap Universal Decoded Data from L1/L2 Blockchain | 
 | GraphQL | Provide Subscriptions, Queries, Mutations for the System | 
 | Batcher | Extract Past Universal Decoded Data from L1/2 Blockchain and Store to MongoDB | 
