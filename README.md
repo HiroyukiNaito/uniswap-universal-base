@@ -40,8 +40,8 @@ Rel(Publisher, GraphQL, "Cast Mutation")
 Rel(GraphQL, MongoDB, "Store Current Data")
 
 Boundary(b4, "BlockChain") {
-   SystemDb_Ext(L1, "L1 BLockChain (Ethereum)", "Exist L1 Uniswap Data")
-   SystemDb_Ext(L2, "L2 BLockChain (Optimism or Base)", "Exist L2 Uniswap Data")
+   SystemDb_Ext(L1, "L1 BLockChain", "Exist L1 (Ethereum) Uniswap Data")
+   SystemDb_Ext(L2, "L2 BLockChain", "Exist L2 (Base or OP) Uniswap Data")
 }
 
 ```
