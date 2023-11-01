@@ -1,10 +1,10 @@
 # uniswap-universal-base
 Keepping storing uniswap universal router txpool and transaction data, vizualizing, analyzing, and trading on the base
 
+
+## Uniswap Universal Base Overview
 ```mermaid
 C4Context
-
-title uniswap-universal-base overview
 
 Person(user, "User", "'UniswapUniversalBase User")
 
@@ -45,3 +45,15 @@ Boundary(b4, "BlockChain") {
 }
 
 ```
+
+
+## Components
+
+| Micro Service | Description  | 
+| :---: | :---: | 
+| MongoDB | Store Univerwap Universal Decoded Data from L1/L2 Blockchain | 
+| GraphQL | Provide Subscriptions, Queries, Mutations for the System | 
+| Batcher | Extract Past Universal Decoded Data from L1/2 Blockchain and Store to MongoDB | 
+| Publisher | Extract Current Universal Decoded Data from L1/2 Blockchain and Publish Mutation to the GraphQL | 
+| Vizualizer (TBD) | Vizualizer Current and Past Uniswap Universal Data by using the GraphQL | 
+| Trader (TBD) | Trade by Using Vizualized and Airbitrary Data form Vizualizer and the GraphQL Data with L1/L2 Block Chain (RPC)  | 
