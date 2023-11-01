@@ -30,7 +30,7 @@ BiRel(Trader, Vizualizer, "Uses")
 BiRel(Trader, L1, "Execute Transaction")
 BiRel(Trader, L2, "Execute Transaction")
 
-Rel(Vizualizer, GraphQL, "Retrieve Formed Data")
+Rel(Vizualizer, GraphQL, "Subscribe Data")
 Rel(Publisher, L1, "Retrive Current Data")
 Rel(Publisher, L2, "Retrive Current Data")
 Rel(Batcher, L1, "Retrive Past Data")
