@@ -46,6 +46,11 @@ Boundary(b4, "BlockChain") {
 
 ```
 
+## Features
+- Can Grasp Uniswap Universal Router Data Flow Correctly
+- Can Grasp Uniswap Universal Router Data Statistically
+- Can Have the Chances to Trade L1 and L2 Arbitration
+- Can Use the Data as Machine or AI Learning
 
 ## Components
 
