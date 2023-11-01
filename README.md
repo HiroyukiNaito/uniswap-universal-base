@@ -1,5 +1,5 @@
 # uniswap-universal-base
-Keepping storing uniswap universal router txpool and transaction data, vizualizing, analyzing, and trading on the base
+Keeping storing uniswap universal router txpool and transaction data, visualization, analyzing, and trading on the base
 
 
 ## Uniswap Universal Base Overview
