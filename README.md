@@ -49,7 +49,7 @@ Boundary(b4, "BlockChain") {
 
 ## Components
 
-| Micro Service | Description  | 
+| Micro Services | Description  | 
 | :---: | :--- | 
 | MongoDB | Store Univerwap Universal Decoded Data from L1/L2 Blockchain | 
 | [GraphQL](https://github.com/HiroyukiNaito/uniswap-universal-graphql) | Provide Subscriptions, Queries, Mutations for the System | 
