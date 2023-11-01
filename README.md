@@ -7,7 +7,7 @@ title uniswap-universal-base overview
 
 Person(user, "User", "uniswap-universal-base user")
 
-System_Boundary(b1, "UniswapUniversalBase") {
+Boundary(b1, "UniswapUniversalBase") {
   
 
   Boundary(b2, "FrontEnd", "boundary") {
