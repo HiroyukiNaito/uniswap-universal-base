@@ -165,6 +165,7 @@ $ docker compose logs -f --tail 100
 | --- | --- | 
 | [GraphQL](https://github.com/HiroyukiNaito/uniswap-universal-graphql) | http://localhost:4000/graphql| 
 | Mongo DB Express  | http://localhost:8081 | 
+| Mongo DB   | localhost:27017 | 
 | Vizualizer (TBD) |  | 
 | Trader (TBD) |   | 
 
