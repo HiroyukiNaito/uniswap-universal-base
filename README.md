@@ -22,7 +22,7 @@ Boundary(b1, "UniswapUniversalBase") {
     System(GraphQL, "GraphQL", "Provide Data with Query or Subscription / Store Data with Mutation")
     System(Batcher, "Batcher", "Extract and Store Past Uniswap Transaction from L1/L2 Block Chain")
     System(Publisher, "Publisher", "Extract and Store Current Uniswap Txpool Transaction from L1/L2 Block Chain")
-    SystemDb_Ext(MongoDB, "MongoDB", "Store L1 L2 Uniswap Transaction and Txpool Data")
+    SystemDb(MongoDB, "MongoDB", "Store L1 L2 Uniswap Transaction and Txpool Data")
   }
 }
 
