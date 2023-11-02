@@ -159,4 +159,12 @@ $ docker compose run -d batcher
 $ docker compose logs -f --tail 100
 ```
 
+## Service URLs
+
+| Micro Services | URL  | 
+| --- | --- | 
+| [GraphQL](https://github.com/HiroyukiNaito/uniswap-universal-graphql) | http://localhost:4000/graphql| 
+| Mongo DB Express  | http://localhost:4000/graphql | 
+| Vizualizer (TBD) |  | 
+| Trader (TBD) |   | 
 
