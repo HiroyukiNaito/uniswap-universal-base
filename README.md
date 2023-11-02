@@ -227,8 +227,7 @@ $ docker compose logs -f --tail 100
 | Trader (TBD) |   | 
 
 ## GraphQL Queries and Subscriptions 
-
-It will increase for developing Vizualizer
-So far, several Query and Subscriptions are available [here](https://github.com/HiroyukiNaito/uniswap-universal-graphql#7-subscriptions)
+- It will increase for developing Vizualizer.
+- Several Query and Subscriptions are available [here](https://github.com/HiroyukiNaito/uniswap-universal-graphql#7-subscriptions)
 
 
