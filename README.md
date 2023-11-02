@@ -47,6 +47,61 @@ Boundary(b4, "BlockChain") {
 }
 
 ```
+## Schemas
+```mermaid
+classDiagram
+
+Signature --|> TransactionData : Inherit
+DecodedData --|> TransactionData : Inherit
+BlockHeader --|> TransactionData : Inherit
+
+
+Signature : String _type
+Signature : String network
+Signature : String  r
+Signature : String  s
+Signature : String  v
+
+DecodedData : [[Object]] contents
+DecodedData : String deadline
+
+BlockHeader: String _type
+BlockHeader: String baseFeePerGas
+BlockHeader: String difficulty
+BlockHeader: String extraData
+BlockHeader: String gasLimit
+BlockHeader: String gasUsed
+BlockHeader: String hash
+BlockHeader: String miner
+BlockHeader: String nonce
+BlockHeader: Int! number
+BlockHeader: String parentHash
+BlockHeader: Int timestamp
+BlockHeader: [String] transactions
+
+
+TransactionData: ID! _id
+TransactionData: Object provider
+TransactionData: Int blockNumber
+TransactionData: String blockHash
+TransactionData: String! hash 
+TransactionData: Int type
+TransactionData: String to
+TransactionData: String from
+TransactionData: Int nonce
+TransactionData: String gasLimit
+TransactionData: String gasPrice
+TransactionData: String maxPriorityFeePerGas
+TransactionData: String maxFeePerGas
+TransactionData: String data
+TransactionData: String value
+TransactionData: String chainId
+TransactionData: Date createdAt
+TransactionData: DecodedData decodedData*
+TransactionData: [String] accessList
+TransactionData: Signature signature*
+TransactionData: BlockHeader blockHeader*
+```
 
 ## Features
 - Can Grasp Uniswap Universal Router Data Flow Correctly
