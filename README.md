@@ -228,6 +228,6 @@ $ docker compose logs -f --tail 100
 
 ## GraphQL Queries and Subscriptions 
 - It will increase for developing Vizualizer.
-- Several Query and Subscriptions are available [here](https://github.com/HiroyukiNaito/uniswap-universal-graphql#7-subscriptions)
+- Several Queries and Subscriptions are available [here](https://github.com/HiroyukiNaito/uniswap-universal-graphql#7-subscriptions)
 
 
