@@ -164,7 +164,7 @@ $ docker compose logs -f --tail 100
 | Micro Services | URL  | 
 | --- | --- | 
 | [GraphQL](https://github.com/HiroyukiNaito/uniswap-universal-graphql) | http://localhost:4000/graphql| 
-| Mongo DB Express  | http://localhost:4000/graphql | 
+| Mongo DB Express  | http://localhost:8081 | 
 | Vizualizer (TBD) |  | 
 | Trader (TBD) |   | 
 
