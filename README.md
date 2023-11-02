@@ -156,6 +156,7 @@ $ docker compose run -d batcher
 
 - Checking container logs
 ```bash
-# docker compose logs -f --tail 100
+$ docker compose logs -f --tail 100
 ```
+
 
