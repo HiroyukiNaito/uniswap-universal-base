@@ -63,7 +63,7 @@ Boundary(b4, "BlockChain") {
 | Vizualizer (TBD) | Vizualizer Current and Past Uniswap Universal Data by Using the GraphQL | 
 | Trader (TBD) | Trade by Using Vizualized and Airbitrary Data form Vizualizer and the GraphQL Data with L1/L2 Block Chain (RPC)  | 
 
-## Install
+## Installation
 
 ### 1. Install Docker
 ```bash
@@ -118,7 +118,7 @@ ENV_L2_RPC_WEBSOCKET_URL=ws://172.31.43.7:9546
 
 - Setting is [Here](https://github.com/HiroyukiNaito/uniswap-universal-base/blob/main/docker-compose.yml#L74)
 - Detailed Description is [Here](https://github.com/HiroyukiNaito/uniswap-universal-batcher)
-- Note: If you increase the frequency, it emit a lot requests to RPC Endpoints (Consume a lot of Resources)
+- Note: If you increase the frequency, it emit a lot requests to RPC Endpoints (i.e. Consume a lot of Resources)
 ```
 # Request block size in parallel (async)
 BLOCK_RANGE_SIZE=1
@@ -139,4 +139,19 @@ L2_RETRIEVE_DAYS=0.001
 L2_WAIT_TIME=1000
 ```
 
+## Up and Running
+- Run entire service 
+```bash
+$ docker compose up -d
+```
+
+- Run batch (If you want to obtain batch of data again after network troubles)
+```bash
+$ docker compose run -d batcher
+```
+
+- Checking log
+```bash
+# docker compose logs -f --tail 100
+```
 
