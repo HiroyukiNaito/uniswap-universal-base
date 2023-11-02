@@ -62,3 +62,80 @@ Boundary(b4, "BlockChain") {
 | [Publisher](https://github.com/HiroyukiNaito/uniswap-universal-publisher) | Extract Current Universal Decoded Data from L1/L2 Blockchain and Publish Mutation to the GraphQL | 
 | Vizualizer (TBD) | Vizualizer Current and Past Uniswap Universal Data by Using the GraphQL | 
 | Trader (TBD) | Trade by Using Vizualized and Airbitrary Data form Vizualizer and the GraphQL Data with L1/L2 Block Chain (RPC)  | 
+
+## Install
+
+### 1. Install Docker
+```bash
+$ sudo apt install docker
+```
+
+### 2. Clone the repository
+
+```bash
+git clone https://github.com/HiroyukiNaito/uniswap-universal-base.git
+```
+
+### 3. Set the `.env` File for Your L1/L2 WebSocket RPC Endpoint and Universal Router Address
+
+```bash
+cd uniswap-universal-base
+vi .env
+```
+
+- Universal Router Address is [here](https://docs.uniswap.org/contracts/v3/reference/deployments)
+
+```bash
+#Set Your Mongo DB Root User Name
+ENV_MONGO_INITDB_ROOT_USERNAME=root
+
+#Set Your Mongo DB Root User Password
+ENV_MONGO_INITDB_ROOT_PASSWORD=password
+
+#Set Your DB Name Which Store Uniswap Universal Router Decoded Data
+ENV_MONGODB_DB=uniswapData
+
+#Set Your DB User Name
+ENV_MONGODB_USER=user
+
+#Set Your DB Password
+ENV_MONGODB_PASSWORD=password
+
+# Set Uniswap L1 Universal Router Address
+ENV_UNIVERSAL_ROUTER_ADDRESS=0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD
+
+# Set Uniswap L2 Universal Router Address
+ENV_L2_UNIVERSAL_ROUTER_ADDRESS=0x198EF79F1F515F02dFE9e3115eD9fC07183f02fC
+
+# Set Your L1 WebSocket RPC Endpoint 
+ENV_RPC_WEBSOCKET_URL=ws://172.31.43.7:8546
+
+# Set Your L2 WebSocket RPC Endpoint 
+ENV_L2_RPC_WEBSOCKET_URL=ws://172.31.43.7:9546
+```
+
+### 3. Set the `docker-compose.yml File for Setting Job Range
+
+- Setting is [Here](https://github.com/HiroyukiNaito/uniswap-universal-base/blob/main/docker-compose.yml#L74)
+- Detailed Description is [Here](https://github.com/HiroyukiNaito/uniswap-universal-batcher)
+```
+# Request block size in parallel (async)
+BLOCK_RANGE_SIZE=1
+
+# Retrive Days (from now)
+RETRIEVE_DAYS=0.001
+
+# Pause time per requests
+WAIT_TIME=1000
+
+# Request block size in parallel (async) in L2 block
+L2_BLOCK_RANGE_SIZE=7
+
+# Retrive Days (from now) in L2 block
+L2_RETRIEVE_DAYS=0.001
+
+# Pause time per requests in L2 block
+L2_WAIT_TIME=1000
+```
+
+
