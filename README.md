@@ -114,11 +114,15 @@ ENV_RPC_WEBSOCKET_URL=ws://172.31.43.7:8546
 ENV_L2_RPC_WEBSOCKET_URL=ws://172.31.43.7:9546
 ```
 
-### 4. Set the `docker-compose.yml File for Setting Job Range
+### 4. Set the `docker-compose.yml` File for Setting Job Range
 
-- Setting is [Here](https://github.com/HiroyukiNaito/uniswap-universal-base/blob/main/docker-compose.yml#L74)
+- Setting part is [Here](https://github.com/HiroyukiNaito/uniswap-universal-base/blob/main/docker-compose.yml#L74)
 - Detailed Description is [Here](https://github.com/HiroyukiNaito/uniswap-universal-batcher)
 - Note: If you increase the frequency, it emit a lot requests to RPC Endpoints (i.e. Consume a lot of Resources)
+
+```
+$ vi docker-compose.yml
+```
 ```
 # Request block size in parallel (async)
 BLOCK_RANGE_SIZE=1
@@ -150,7 +154,7 @@ $ docker compose up -d
 $ docker compose run -d batcher
 ```
 
-- Checking log
+- Checking container logs
 ```bash
 # docker compose logs -f --tail 100
 ```
