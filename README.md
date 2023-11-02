@@ -73,7 +73,7 @@ $ sudo apt install docker
 ### 2. Clone the repository
 
 ```bash
-git clone https://github.com/HiroyukiNaito/uniswap-universal-base.git
+$ git clone https://github.com/HiroyukiNaito/uniswap-universal-base.git
 ```
 
 ### 3. Set the `.env` File for Your L1/L2 WebSocket RPC Endpoint and Universal Router Address
