@@ -51,9 +51,9 @@ Boundary(b4, "BlockChain") {
 ```mermaid
 classDiagram
 
-Signature --> TransactionData : has-a
-DecodedData --> TransactionData : has-a
-BlockHeader --> TransactionData : has-a
+Signature <-- TransactionData : has-a
+DecodedData <-- TransactionData : has-a
+BlockHeader <-- TransactionData : has-a
 
 
 Signature : String _type
