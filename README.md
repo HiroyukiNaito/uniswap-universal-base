@@ -6,6 +6,8 @@ Keeping storing uniswap universal router txpool and transaction data, visualizat
 ```mermaid
 C4Context
 
+title Uniswap Universal Base System Overview
+
 Person(user, "User", "'UniswapUniversalBase User")
 
 Boundary(b1, "UniswapUniversalBase") {
@@ -20,7 +22,7 @@ Boundary(b1, "UniswapUniversalBase") {
     System(GraphQL, "GraphQL", "Provide Data with Query or Subscription / Store Data with Mutation")
     System(Batcher, "Batcher", "Extract and Store Past Uniswap Transaction from L1/L2 Block Chain")
     System(Publisher, "Publisher", "Extract and Store Current Uniswap Txpool Transaction from L1/L2 Block Chain")
-    SystemDb_Ext(MongoDB, "MongoDB", "Store L1 L2 Uniswap Transaction and Txpool Data")
+    SystemDb(MongoDB, "MongoDB", "Store L1 L2 Uniswap Transaction and Txpool Data")
   }
 }
 
@@ -44,6 +46,61 @@ Boundary(b4, "BlockChain") {
    SystemDb_Ext(L2, "L2 BLockChain", "Exist L2 (Base or OP) Uniswap Data")
 }
 
+```
+## Schemas
+```mermaid
+classDiagram
+
+Signature <-- TransactionData : has-a
+DecodedData <-- TransactionData : has-a
+BlockHeader <-- TransactionData : has-a
+
+
+Signature : String _type
+Signature : String network
+Signature : String  r
+Signature : String  s
+Signature : String  v
+
+DecodedData : [[Object]] contents
+DecodedData : String deadline
+
+BlockHeader: String _type
+BlockHeader: String baseFeePerGas
+BlockHeader: String difficulty
+BlockHeader: String extraData
+BlockHeader: String gasLimit
+BlockHeader: String gasUsed
+BlockHeader: String hash
+BlockHeader: String miner
+BlockHeader: String nonce
+BlockHeader: Int! number
+BlockHeader: String parentHash
+BlockHeader: Int timestamp
+BlockHeader: [String] transactions
+
+
+TransactionData: ID! _id
+TransactionData: Object provider
+TransactionData: Int blockNumber
+TransactionData: String blockHash
+TransactionData: String! hash 
+TransactionData: Int type
+TransactionData: String to
+TransactionData: String from
+TransactionData: Int nonce
+TransactionData: String gasLimit
+TransactionData: String gasPrice
+TransactionData: String maxPriorityFeePerGas
+TransactionData: String maxFeePerGas
+TransactionData: String data
+TransactionData: String value
+TransactionData: String chainId
+TransactionData: Date createdAt
+TransactionData: DecodedData decodedData*
+TransactionData: [String] accessList
+TransactionData: Signature signature*
+TransactionData: BlockHeader blockHeader*
 ```
 
 ## Features
@@ -170,8 +227,7 @@ $ docker compose logs -f --tail 100
 | Trader (TBD) |   | 
 
 ## GraphQL Queries and Subscriptions 
-
-It will increase for developing Vizualizer
-So far, several Query and Subscriptions are available [here](https://github.com/HiroyukiNaito/uniswap-universal-graphql#7-subscriptions)
+- It will increase for developing Vizualizer.
+- Several Queries and Subscriptions are available [here](https://github.com/HiroyukiNaito/uniswap-universal-graphql#7-subscriptions)
 
 
