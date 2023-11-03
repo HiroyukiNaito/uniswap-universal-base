@@ -158,17 +158,17 @@ ENV_MONGODB_USER=user
 #Set Your DB Password
 ENV_MONGODB_PASSWORD=password
 
-# Set Uniswap L1 Universal Router Address
+# Set Uniswap L1 (Ethereum) Universal Router Address
 ENV_UNIVERSAL_ROUTER_ADDRESS=0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD
 
-# Set Uniswap L2 Universal Router Address
+# Set Uniswap L2 (Base or Optimism) Universal Router Address
 ENV_L2_UNIVERSAL_ROUTER_ADDRESS=0x198EF79F1F515F02dFE9e3115eD9fC07183f02fC
 
 # Set Your L1 WebSocket RPC Endpoint 
-ENV_RPC_WEBSOCKET_URL=ws://172.31.43.7:8546
+ENV_RPC_WEBSOCKET_URL=wss://ethereum.publicnode.com
 
 # Set Your L2 WebSocket RPC Endpoint 
-ENV_L2_RPC_WEBSOCKET_URL=ws://172.31.43.7:9546
+ENV_L2_RPC_WEBSOCKET_URL=wss://base.publicnode.com
 ```
 
 ### 4. Set the `docker-compose.yml` File for Setting Job Range
