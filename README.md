@@ -21,8 +21,8 @@ Boundary(b1, "UniswapUniversalBase") {
   Boundary(b3, "BackEnd", "boundary") {
     System(GraphQL, "GraphQL", "Provide Data with Query or Subscription / Store Data with Mutation")
     System(Batcher, "Batcher", "Extract and Store Past Uniswap Transaction from L1/L2 Block Chain")
-    System(Publisher, "Publisher", "Extract and Store Current Uniswap Txpool Transaction from L1/L2 Block Chain")
-    SystemDb(MongoDB, "MongoDB", "Store L1 L2 Uniswap Transaction and Txpool Data")
+    System(Publisher, "Publisher", "Extract and Store Current Uniswap Txpool and Transaction from L1/L2 Block Chain")
+    SystemDb(MongoDB, "MongoDB", "Store L1/L2 Uniswap Transaction and Txpool Data")
   }
 }
 
@@ -42,8 +42,8 @@ Rel(Publisher, GraphQL, "Cast Mutation")
 Rel(GraphQL, MongoDB, "Store Current Data")
 
 Boundary(b4, "BlockChain") {
-   SystemDb_Ext(L1, "L1 BLockChain", "Exist L1 (Ethereum) Uniswap Data")
-   SystemDb_Ext(L2, "L2 BLockChain", "Exist L2 (Base or OP) Uniswap Data")
+   SystemDb_Ext(L1, "L1 BLockChain", "Existing L1 (Ethereum) Uniswap Data")
+   SystemDb_Ext(L2, "L2 BLockChain", "Existing L2 (Base or OP) Uniswap Data")
 }
 
 ```
