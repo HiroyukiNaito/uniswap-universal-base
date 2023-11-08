@@ -8,7 +8,7 @@ C4Context
 
 title Uniswap Universal Base System Overview
 
-Person(user, "User", "'UniswapUniversalBase User")
+Person(user, "User", "UniswapUniversalBase User")
 
 Boundary(b1, "UniswapUniversalBase") {
   
