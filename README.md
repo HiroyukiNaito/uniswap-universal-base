@@ -62,7 +62,7 @@ Signature : String  r
 Signature : String  s
 Signature : String  v
 
-DecodedData : [[Object]] contents
+DecodedData : [Object] contents
 DecodedData : String deadline
 
 BlockHeader: String _type
