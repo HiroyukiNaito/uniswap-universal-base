@@ -169,6 +169,9 @@ ENV_RPC_WEBSOCKET_URL=wss://ethereum.publicnode.com
 
 # Set Your L2 WebSocket RPC Endpoint 
 ENV_L2_RPC_WEBSOCKET_URL=wss://base.publicnode.com
+
+# Mutation Access Token
+APP_SECRET=AccessToken
 ```
 
 ### 4. Set the `docker-compose.yml` File for Setting Job Range
