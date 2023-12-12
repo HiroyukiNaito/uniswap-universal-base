@@ -1,5 +1,5 @@
 # uniswap-universal-base
-Keeping storing uniswap universal router txpool and transaction data, visualization, analyzing, and trading on the base
+Keeping storing decoded uniswap universal router txpool and transaction data, visualization, analyzing, and trading on the base
 
 
 ## Uniswap Universal Base Overview
@@ -62,7 +62,7 @@ Signature : String  r
 Signature : String  s
 Signature : String  v
 
-DecodedData : [[Object]] contents
+DecodedData : [Object] contents
 DecodedData : String deadline
 
 BlockHeader: String _type
@@ -117,7 +117,7 @@ TransactionData: BlockHeader blockHeader*
 | [GraphQL](https://github.com/HiroyukiNaito/uniswap-universal-graphql) | Provide Subscriptions, Queries, Mutations for the System | 
 | [Batcher](https://github.com/HiroyukiNaito/uniswap-universal-batcher) | Extract Past Universal Decoded Data from L1/L2 Blockchain and Store to MongoDB | 
 | [Publisher](https://github.com/HiroyukiNaito/uniswap-universal-publisher) | Extract Current Universal Decoded Data from L1/L2 Blockchain and Publish Mutation to the GraphQL | 
-| Vizualizer (TBD) | Vizualizer Current and Past Uniswap Universal Data by Using the GraphQL | 
+| Vizualizer (TBD) | Vizualize Current and Past Uniswap Universal Router Data by Using the GraphQL | 
 | Trader (TBD) | Trade by Using Vizualized and Airbitrary Data form Vizualizer and the GraphQL Data with L1/L2 Block Chain (RPC)  | 
 
 ## Installation
