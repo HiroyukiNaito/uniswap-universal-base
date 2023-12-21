@@ -235,9 +235,16 @@ $ docker compose logs -f --tail 100
 
 ## Mongo Query Example
 
+- login 
+```bash
+$  docker-compose exec mongo bash
+# mongosh -u root
+test> use uniswapData
+```
+
 - Getting [SWEEP, V3_SWAP_EXACT_IN, V3_SWAP_EXACT_OUT, SWEEP, TRANSFER, PAY_PORTION, V2_SWAP_EXACT_IN, V2_SWAP_EXACT_OUT, PERMIT2_PERMIT, WRAP_ETH, UNWRAP_WETH] Data
 ```bash
-db.l1_transactions.find({ "decodedData.contents" : {$elemMatch : {"value": "[Change it]"}}})
+# db.l1_transactions.find({ "decodedData.contents" : {$elemMatch : {"value": "[Change it]"}}})
 ```
 
 
