@@ -13,6 +13,7 @@ services:
       MONGODB_PASSWORD: ${ENV_MONGODB_PASSWORD}
       APP_SECRET: ${APP_SECRET}
       EXPIRE_TIME: 86400
+      USE_GRAPHIQL: true
     depends_on:
       - mongo
     command: sh ./runGraphQL.sh
