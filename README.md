@@ -252,5 +252,8 @@ test> use uniswapData
 ```bash
 # db.l1_transactions.find({ "decodedData.contents" : {$elemMatch : {"value": "[Change it]"}}})
 ```
-
+- Getting Latest one of the command exmaple
+```bash
+# db.l1_transactions.find({ "decodedData.contents" : {$elemMatch : {"value": "TRANSFER"}}}).sort({ createdAt: -1 }).limit(1)
+```
 
