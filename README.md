@@ -257,7 +257,35 @@ uniswapData> db.l1_transactions.find({ "decodedData.contents" : {$elemMatch : {"
 uniswapData> db.l1_transactions.find({ "decodedData.contents" : {$elemMatch : {"value": "TRANSFER"}}}).sort({ createdAt: -1 }).limit(1)
 ```
 
-- Data counts
+- Counting Data
 ```bash
 uniswapData>  db.l1_transactions.countDocuments()
 ```
+- Getting Index
+```bash
+uniswapData> db.l1_transactions.getIndexes()
+[
+  { v: 2, key: { _id: 1 }, name: '_id_' },
+  {
+    v: 2,
+    key: { hash: 1 },
+    name: 'hash_1',
+    background: true,
+    unique: true
+  },
+  {
+    v: 2,
+    key: { 'blockHeader.timestamp': 1 },
+    name: 'blockHeader.timestamp_1',
+    background: true
+  },
+  {
+    v: 2,
+    key: { createdAt: 1 },
+    name: 'createdAt_1',
+    background: true,
+    expireAfterSeconds: 86400
+  }
+]
+```
+
