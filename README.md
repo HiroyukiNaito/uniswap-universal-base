@@ -268,6 +268,12 @@ uniswapData> db.l1_transactions.getIndexes()
   { v: 2, key: { _id: 1 }, name: '_id_' },
   {
     v: 2,
+    key: { blockNumber: 1 },
+    name: 'blockNumber_1',
+    background: true
+  },
+  {
+    v: 2,
     key: { hash: 1 },
     name: 'hash_1',
     background: true,
