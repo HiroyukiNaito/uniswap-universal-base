@@ -250,10 +250,14 @@ test> use uniswapData
 
 - Getting [SWEEP, V3_SWAP_EXACT_IN, V3_SWAP_EXACT_OUT, SWEEP, TRANSFER, PAY_PORTION, V2_SWAP_EXACT_IN, V2_SWAP_EXACT_OUT, PERMIT2_PERMIT, WRAP_ETH, UNWRAP_WETH] Data
 ```bash
-# db.l1_transactions.find({ "decodedData.contents" : {$elemMatch : {"value": "[Change it]"}}})
+uniswapData> db.l1_transactions.find({ "decodedData.contents" : {$elemMatch : {"value": "[Change it]"}}})
 ```
 - Getting Latest one of the command exmaple
 ```bash
-# db.l1_transactions.find({ "decodedData.contents" : {$elemMatch : {"value": "TRANSFER"}}}).sort({ createdAt: -1 }).limit(1)
+uniswapData> db.l1_transactions.find({ "decodedData.contents" : {$elemMatch : {"value": "TRANSFER"}}}).sort({ createdAt: -1 }).limit(1)
 ```
 
+- Data counts
+```bash
+uniswapData>  db.l1_transactions.countDocuments()
+```
